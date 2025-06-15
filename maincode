@@ -1,0 +1,19 @@
+# BMI Calculator
+weight= float(input("Weight (kg): "))
+height= float(input("Height (m): "))
+
+# Calculating BMI using the formula: BMI = weight / (height^2)
+bmi = round(weight/(height ** 2), 2)
+
+# Displaying the calculated BMI
+print(f"BMI: {bmi}")
+
+# Giving health advice based on BMI value
+if bmi < 18.5:
+    gw = round(18.5 * height * height - weight, 2)
+    print(f"Underweight. Gain {gw} kg.")
+elif bmi > 24.9:
+    lw = round(weight - 24.9 * height * height, 2)
+    print(f"Overweight. Lose {lw} kg.")
+else:
+    print("Normal weight.")
